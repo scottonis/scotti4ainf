@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function stampa() {
+var print=document.getElementById("nome").value;
+document.getElementById("nm").innerHTML=print;
+
+var print=document.getElementById("cognome").value;
+document.getElementById("cm").innerHTML=print;
+
+var print=document.getElementById("indirizzo").value;
+document.getElementById("id").innerHTML=print;
+
+var print=document.getElementById("comune").value;
+document.getElementById("co").innerHTML=print;
+}
+
+</script>
+</head>
+<body bgcolor="#c0c0c0">
+
+<h1 align="center" style="color:#423189;"><b>ANAGRAFICA DELLO SCOTTONIS E DEL LIMANOV</b></h1>
+<h3>NOME</h3>
+<input type="text" id="nome">
+<h3>COGNOME</h3>
+<input type="text" id="cognome">
+<h3>INDIRIZZO</h3>
+<input type="text" id="indirizzo">
+<h3>COMUNE</h3>
+<input type="text" id="comune">
+<input type="button" value="CONFERMA" onclick="stampa()">
+
+<p id="nm"></p>
+<p id="cm"></p>
+<p id="id"></p>
+<p id="co"></p>
+
+<h3>IN QUALI MATERIE HAI UNA VALUTAZIONE?</h3>
+<input type="checkbox" id="Italiano">
+<label for="myCheck">Italiano</label> 
+<input type="checkbox" id="Matematica">
+<label for="myCheck">Matematica</label>
+<input type="checkbox" id="Informatica">
+<label for="myCheck">Informatica</label>
+<input type="checkbox" id="Inglese">
+<label for="myCheck">Inglese</label>
+<input type="button" value="CONFERMA" onclick="myFunction()">
+
+<p id="text"></p>
+<p id="text1"></p>
+<p id="text2"></p>
+<p id="text3"></p>
+
+<script>
+function myFunction() {
+  var ita = document.getElementById("Italiano");
+  var mat = document.getElementById("Matematica");
+  var inf = document.getElementById("Informatica");
+  var ing = document.getElementById("Inglese");
+  
+  if (ita.checked == true){
+    document.getElementById("text").innerHTML= "Italiano";
+  } else {
+    document.getElementById("text").innerHTML= "";
+  }
+
+  if (mat.checked == true){
+    document.getElementById("text1").innerHTML= "Matematica";  
+  } else {
+    document.getElementById("text1").innerHTML= "";
+  }
+
+  if (inf.checked == true){
+    document.getElementById("text2").innerHTML= "Informatica";  
+  } else {
+    document.getElementById("text2").innerHTML= "";
+  }
+
+  if (ing.checked == true){
+    document.getElementById("text3").innerHTML= "Inglese"; 
+  } else {
+    document.getElementById("text3").innerHTML= "";
+  }
+}
+</script>
+
+<h3>SESSO?</h3>
+<input type="radio" id="maschione" name="sesso" value="Maschio">
+<label for="maschione">Maschio</label><br>
+<input type="radio" id="femminone" name="sesso" value="Femmina">
+<label for="femminone">Femmina</label><br>
+<input type="radio" id="pocone" name="sesso" value="Poco">
+<label for="pocone">Poco</label><br>
+<input type="radio" id="abbastanzone" name="sesso" value="Abbastanza">
+<label for="abbastanzone">Abbastanza</label><br>
+<input type="radio" id="moltone" name="sesso" value="Molto">
+<label for="moltone">Molto</label><br>
+<input type="button" value="CONFERMA" onclick="myFunctionSesso()">
+
+<p id="maschio1"></p>
+<p id="femmina1"></p>
+<p id="poco1"></p>
+<p id="abbastanza1"></p>
+<p id="molto1"></p>
+
+<script>
+function myFunctionSesso() {
+  var mas = document.getElementById("maschione");
+  var fem = document.getElementById("femminone");
+  var poc = document.getElementById("pocone");
+  var abb = document.getElementById("abbastanzone");
+  var mol = document.getElementById("moltone");
+  
+  if (mas.checked == true){
+    document.getElementById("maschio1").innerHTML= "Maschio";
+  } else {
+    document.getElementById("maschio1").innerHTML= "";
+  }
+
+  if (fem.checked == true){
+    document.getElementById("femmina1").innerHTML= "Femmina";  
+  } else {
+    document.getElementById("femmina1").innerHTML= "";
+  }
+
+  if (poc.checked == true){
+    document.getElementById("poco1").innerHTML= "Poco(mi dispiace)";  
+  } else {
+    document.getElementById("poco1").innerHTML= "";
+  }
+
+  if (abb.checked == true){
+    document.getElementById("abbastanza1").innerHTML= "Abbastanza(ci siamo)"; 
+  } else {
+    document.getElementById("abbastanza1").innerHTML= "";
+  }
+  
+  if (mol.checked == true){
+    document.getElementById("molto1").innerHTML= "Molto(luca rovetta)"; 
+  } else {
+    document.getElementById("molto1").innerHTML= "";
+  }
+}
+</script>
+
+<h3>CHE SQUADRA TIFI?</h3>
+<label for="teams">Scegli una squadra:</label>
+  <select name="teams" id="teams">
+    <option value="Milan">Milan</option>
+    <option value="Inter">Inter</option>
+    <option value="Juventus">Juventus</option>
+    <option value="Barcellona">Barcellona</option>
+    <option value="Real Madrid">Real Madrid</option>
+    <option value="Bayern Monaco">Bayern Monaco</option>
+    <option value="Borussia Dortmund">Borussia Dortmund</option>
+    <option value="PSG">PSG</option>
+    <option value="Manchester City">Manchester City</option>
+    <option value="Manchester United">Manchester United</option>
+    <option value="Liverpool">Liverpool</option>
+    <option value="Chelsea">Chelsea</option>
+  </select>
+<input type="button" value="CONFERMA" onclick="myFunctionSquadre()">
+
+<p id="milan"></p>
+<p id="inter"></p>
+<p id="juve"></p>
+<p id="barca"></p>
+<p id="real"></p>
+<p id="bayern"></p>
+<p id="borussia"></p>
+<p id="psg"></p>
+<p id="city"></p>
+<p id="united"></p>
+<p id="liverpool"></p>
+<p id="chelsea"></p>
+
+<script>
+  function myFunctionSquadre() {
+    var mas = document.getElementByValue("maschione");
+    var fem = document.getElementByValue("femminone");
+    var poc = document.getElementByValue("pocone");
+    var abb = document.getElementById("abbastanzone");
+    var mol = document.getElementById("moltone");
+    var mas = document.getElementById("maschione");
+    var fem = document.getElementById("femminone");
+    var poc = document.getElementById("pocone");
+    var abb = document.getElementById("abbastanzone");
+    var mol = document.getElementById("moltone");
+    var mol = document.getElementById("moltone");
+    var mol = document.getElementById("moltone");
+
+    
+    if (mas.checked == true){
+      document.getElementById("maschio1").innerHTML= "Maschio";
+    } else {
+      document.getElementById("maschio1").innerHTML= "";
+    }
+  
+    if (fem.checked == true){
+      document.getElementById("femmina1").innerHTML= "Femmina";  
+    } else {
+      document.getElementById("femmina1").innerHTML= "";
+    }
+  
+    if (poc.checked == true){
+      document.getElementById("poco1").innerHTML= "Poco(mi dispiace)";  
+    } else {
+      document.getElementById("poco1").innerHTML= "";
+    }
+  
+    if (abb.checked == true){
+      document.getElementById("abbastanza1").innerHTML= "Abbastanza(ci siamo)"; 
+    } else {
+      document.getElementById("abbastanza1").innerHTML= "";
+    }
+    
+    if (mol.checked == true){
+      document.getElementById("molto1").innerHTML= "Molto(luca rovetta)"; 
+    } else {
+      document.getElementById("molto1").innerHTML= "";
+    }
+  }
+  </script>
+
+
+
+</body>
+</html>
